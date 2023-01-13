@@ -1,4 +1,4 @@
-# JWT-SpringSecurity-Roles
+# JWT-Spring-Security
 JWT-SpringSecurity-Roles
 
 Project to provide security to user registration and access. We added two roles, admin and user to allow different permissions.
@@ -8,7 +8,7 @@ It's a backend application built with maven and spring in which an API is expose
 
 
 ```
-git clone https://github.com/gcastrogomez/jwt-spring.git
+git clone https://github.com/gcastrogomez/JWT-Spring-Security.git
 cd jwt-spring
 mvn spring-boot:run
 ```
