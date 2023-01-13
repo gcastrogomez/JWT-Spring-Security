@@ -25,8 +25,8 @@ public class JwtRequestFilter extends BasicAuthenticationFilter {
 
 	private JwtUserDetailsService jwtUserDetailsService;
 	private JwtTokenUtil jwtTokenUtil;
-	private List<String> pathsAdmin = Arrays.asList("/hello", "/admin", "/crearEmpleado");
-	private List<String> pathsUsers = Arrays.asList("/hello");
+	private List<String> pathsAdmin = Arrays.asList("/hello", "/admin", "/createEmployee");
+	private List<String> pathsUsers = Arrays.asList("/hello", "/modifyEmployee");
 
 	public JwtRequestFilter(AuthenticationManager authenticationManager, JwtUserDetailsService jwtUserDetailsService,
 			JwtTokenUtil jwtTokenUtil) {
