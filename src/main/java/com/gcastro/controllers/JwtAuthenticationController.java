@@ -12,7 +12,6 @@ import com.gcastro.config.JwtTokenUtil;
 import com.gcastro.entities.JwtUserRequest;
 import com.gcastro.entities.JwtUserResponse;
 import com.gcastro.entities.User;
-import com.gcastro.entities.UserDTO;
 import com.gcastro.services.JwtUserDetailsService;
 
 @RestController
@@ -33,11 +32,6 @@ public class JwtAuthenticationController {
 		final String token = jwtTokenUtil.generateToken(userDetails);
 
 		return ResponseEntity.ok(new JwtUserResponse(token));
-	}
-
-	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public ResponseEntity<?> saveUser(@RequestBody UserDTO user) throws Exception {
-		return ResponseEntity.ok(userDetailsService.save(user));
 	}
 	
 }
