@@ -14,3 +14,5 @@ mvn spring-boot:run
 ```
 
 The application is pure backend, so we will have to consume the services through postman or a similar client. A user can be registered, with a password, through a JSON, authenticate it in the same way and a token will be obtained that will allow access to "/hello".
+
+To access "/admin", you need to authenticate the admin and generate the token.
