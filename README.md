@@ -9,7 +9,7 @@ It's a backend application built with maven and spring in which an API is expose
 
 ```
 git clone https://github.com/gcastrogomez/JWT-Spring-Security.git
-cd jwt-spring
+cd JWT-Spring-Security
 mvn spring-boot:run
 ```
 
