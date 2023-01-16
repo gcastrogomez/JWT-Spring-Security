@@ -3,7 +3,7 @@ JWT-Spring-Security
 
 Project to provide security to user registration and access. We added two roles, admin and user to allow different permissions. Employees are managed safely. 
 
-## Running gestion-empleados locally
+## Running JWT-Spring-Security locally
 It's a backend application built with maven and spring in which an API is exposed to protect user registration and authentication through JWT. You can start it with the following commands:
 
 
