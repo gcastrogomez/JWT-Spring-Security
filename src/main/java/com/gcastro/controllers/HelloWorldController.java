@@ -37,8 +37,8 @@ public class HelloWorldController {
 	}
 	
 	@PostMapping("/modifyEmployee")
-	public Employee modify(@Valid @RequestBody EmployeeDTO e, HttpServletRequest request) throws FileAlreadyExistsException {
-		return employeeService.insert(e);
+	public Employee update(@Valid @RequestBody EmployeeDTO e, HttpServletRequest request) throws FileAlreadyExistsException {
+		return employeeService.update(e, request);
 	}
 	
 	

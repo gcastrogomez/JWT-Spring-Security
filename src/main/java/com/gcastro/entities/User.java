@@ -28,7 +28,16 @@ public class User {
 	@Column(name = "role")
 	private String role;
 	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	@OneToOne(mappedBy = "employee")
+	@JsonIgnore
     private Employee employee;
 	
 	public String getRole() {
@@ -54,5 +63,16 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+
+	
+
 	
 }

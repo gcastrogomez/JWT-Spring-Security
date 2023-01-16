@@ -32,7 +32,13 @@ public class JwtUserDetailsService {
 			userRepository.save(admin);
 		}
 	}
-
+	
+	public void verifyPassword(String password, String passwordEncoder) {
+		if (!encryptedPassword.matches(password, passwordEncoder)) {
+			throw new UsernameNotFoundException("Incorrect password. ");
+		}
+	}
+	
 	public User loadUserByUsername(String username) {
 		User userLoad = userRepository.findByUsername(username);
 		if (userLoad == null) {
@@ -52,6 +58,16 @@ public class JwtUserDetailsService {
 			throw new FileAlreadyExistsException(user.getUsername()+" already exists.");
 		}
 		return userRepository.save(newUser);
+	}
+	
+	public User findById(Long id) {
+		return userRepository.findById(id).orElse(null);
+	}
+	
+	public User save(User user) {
+		user.setPassword(encryptedPassword.encode(user.getPassword()));
+		return userRepository.save(user);
+		
 	}
 
 }

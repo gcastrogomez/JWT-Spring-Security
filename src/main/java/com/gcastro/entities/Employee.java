@@ -9,6 +9,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="employee")
 public class Employee {
@@ -28,6 +30,7 @@ public class Employee {
 	
 	@OneToOne
 	@JoinColumn(name="user_id", referencedColumnName="id")
+	@JsonIgnore
 	private User employee;
 	
 	public Long getId() {
